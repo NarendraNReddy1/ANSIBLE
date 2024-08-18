@@ -5,8 +5,11 @@
     Trainer: "SIVA"
     Duration: "15hrs"
   tasks:
-  - name: print information
+  - name: Overridding
     vars:
       COURSE: "DEVOPS"
     ansible.builtin.debug:
       msg: "Hi,learning {{COURSE}}"    
+  - name: Inheritance    
+    ansible.builtin.debug:
+      msg: "Hi learning {{COURSE}}"
