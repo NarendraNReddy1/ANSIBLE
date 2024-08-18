@@ -1,5 +1,6 @@
 - name: PLAY-1
   hosts: localhost 
+  become: no
   tasks:
   - name: PLAY-1 and TASK-1
     ansible.builtin.debug:
@@ -8,12 +9,13 @@
   - name: PLAY-1 and Task-2
     ansible.builtin.debug:
       msg: "Hello I am PLAY-1 and TASK2"
-      
+
 - name: PLAY-2
   hosts: localhost
+  become: no
   tasks:
   - name: PLAY-2 and TASK-1
-    ansible.builtint.debug:
+    ansible.builtin.debug:
       msg: "Hello I am PLAY-2 and TASK-1"   
   - name: PLAY-2 and TASK-2
     ansible.builtin.debug:
