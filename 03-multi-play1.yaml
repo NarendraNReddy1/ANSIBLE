@@ -1,5 +1,5 @@
 - name: multiplay
-  hosts: local
+  hosts: localhost
   become: yes
   tasks:
   - name: Play-1 task-1
@@ -9,7 +9,7 @@
     ansible.builtin.debug:
       msg: "Play-1 and task-2"
 - name: multiplay
-  hosts: local
+  hosts: localhost
   become: yes
   tasks:
   - name: Play-2 task-1
