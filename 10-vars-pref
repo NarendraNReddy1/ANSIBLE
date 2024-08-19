@@ -10,7 +10,7 @@
     private: false  
   tasks:
   - name: Check pref
-    vars:
-      WISHES: "WISHES FROM TASK LEVEL"
+    # vars:
+    #   WISHES: "WISHES FROM TASK LEVEL"
     ansible.builtin.debug:
       msg: "Hello, {{WISHES}}"
