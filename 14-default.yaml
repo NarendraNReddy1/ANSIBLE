@@ -39,3 +39,16 @@
     ansible.builtin.debug:
       msg: "min:::{{ages | min}} max:{{ages | max}}"
 
+- name: convert dict into items
+  hosts: localhost
+  vars: 
+    my_dict:
+      Course: ansibl
+      Trainer: NNR
+      Duration: 120hr
+  taks:
+  - name: Dictto items
+    ansible.builtin.debug:
+      msg"{{my_dict | dict2items }}
+
+
