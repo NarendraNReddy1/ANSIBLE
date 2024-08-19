@@ -14,5 +14,5 @@
 
   - name: DISPLAY USER
     ansible.builtin.debug: 
-      msg: "USER info {{USER}}"    
+      msg: "USER info {{USER.id}}"    
 
