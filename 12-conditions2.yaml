@@ -1,0 +1,8 @@
+- name: conditions
+  hosts: localhost
+  become: no
+  tasks:
+  - name: check user
+    ansible.builtin.command: id expense
+    
+
