@@ -13,4 +13,4 @@
     vars:
       WISHES: "WISHES FROM TASK LEVEL"
     ansible.builtin.debug:
-      msg: "Hello, {WISHES}"
+      msg: "Hello, {{WISHES}}"
