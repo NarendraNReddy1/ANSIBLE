@@ -4,10 +4,10 @@
     WISHES: "WISHES FROM PLAYLEVEL"
   vars_files:
     vars.yaml  
-  vars_prompt:
-  - name: WISHES
-    prompt: Please enter WISHES from vars
-    private: false  
+  # vars_prompt:
+  # - name: WISHES
+  #   prompt: Please enter WISHES from vars
+  #   private: false  
   tasks:
   - name: Check pref
     # vars:
