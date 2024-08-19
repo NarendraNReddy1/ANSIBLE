@@ -1,0 +1,16 @@
+- name: datatypes
+  hosts: localhost
+  become: no
+  vars:
+    TOOLS:
+    - AWS
+    - TERRAFORM
+    EXP:
+      aws: 2
+      terraform: 3
+    RealProject: true  
+  task:
+  - name: datatypes
+    ansible.builtin.debug:
+      msg: "{{TOOLS}} {{EXP}} {{RealProject}}"
+    
