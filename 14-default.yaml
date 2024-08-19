@@ -12,3 +12,12 @@
   - name: Covert into upper case
     ansible.builtin.debug:
       msg: "{{greeting | upper}}"
+
+- name: lower cases
+  hosts: localhost
+  vars:
+    greeting: "Hello, good morning"
+  tasks:
+  - name: Convert into lower cases
+    ansible.builtin.debug:
+      msg: "{{greeting | lower}}"  
