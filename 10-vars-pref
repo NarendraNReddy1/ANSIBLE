@@ -14,3 +14,11 @@
     #   WISHES: "WISHES FROM TASK LEVEL"
     ansible.builtin.debug:
       msg: "Hello, {{WISHES}}"
+
+# ARGS
+# TASK LEVEL
+# FILES
+# PROMPT      
+# PLAY LEVEL
+# INI
+# ROLE level
