@@ -9,7 +9,7 @@
       aws: 2
       terraform: 3
     RealProject: true  
-  task:
+  tasks:
   - name: datatypes
     ansible.builtin.debug:
       msg: "{{TOOLS}} {{EXP}} {{RealProject}}"
