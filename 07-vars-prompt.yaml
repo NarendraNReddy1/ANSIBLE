@@ -1,0 +1,13 @@
+- name: Confidential
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your username
+    private: false
+  - name: PASSWORD
+    prompt: Please enter password
+    private: true
+  tasks:
+  - name: Confidentail
+    ansible.builtin.debug:
+      msg: "{{USERNAME}} {{PASSWORD}}"      
