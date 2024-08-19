@@ -1,0 +1,9 @@
+- name: vars
+  hosts: localhost
+  become: no
+  vars:
+    COURSE: "TERRAFORM"
+  tasks:
+  - name: print vars
+    ansible.builtin.debug:
+      msg: "{{COURSE}}"  
