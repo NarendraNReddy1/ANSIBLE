@@ -25,7 +25,7 @@
 - name: Remove dups
   hosts: localhost
   vars:
-  - numbers: [1,2,3,3,4,4,5,6,6]
+    numbers: [1,2,3,3,4,4,5,6,6]
   tasks:
   - name: remove dups
     ansible.builtin.debug:
