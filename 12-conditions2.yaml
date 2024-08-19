@@ -4,5 +4,8 @@
   tasks:
   - name: check user
     ansible.builtin.command: id expense
-    
+
+  - name: msg
+    ansible.builtin.debug:
+      msg: "Helo"  
 
