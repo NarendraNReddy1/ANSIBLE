@@ -1,9 +1,12 @@
 - name: vars
   hosts: localhost
   become: no
-  vars:
-    COURSE: "TERRAFORM"
+  # vars:
+  #   COURSE: "TERRAFORM"
+  vars_files:
+    vars.yaml  
   tasks:
   - name: print vars
     ansible.builtin.debug:
       msg: "{{COURSE}}"  
+  
