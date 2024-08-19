@@ -3,10 +3,19 @@
   become: no
   # vars:
   #   COURSE: "TERRAFORM"
-  vars_files:
-    vars.yaml  
+  # vars_files:
+  #   vars.yaml  
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your username
+    private: false
+
+  - name: PASSWORD
+    prompt: Please enter your Password
+    private: true      
+    
   tasks:
   - name: print vars
     ansible.builtin.debug:
-      msg: "{{COURSE}}"  
+      msg: "{{USERNAME}}"  
   
