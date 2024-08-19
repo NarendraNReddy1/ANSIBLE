@@ -1,7 +1,7 @@
 - name: variables pref
   hosts: localhost 
-  vars:
-    WISHES: "WISHES FROM PLAYLEVEL"
+  # vars:
+  #   WISHES: "WISHES FROM PLAYLEVEL"
   vars_files:
     vars.yaml  
   # vars_prompt:
