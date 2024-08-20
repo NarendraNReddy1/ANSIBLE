@@ -111,6 +111,4 @@
       state: latest
     loop:
     - ansible
-    - terraform
-    - devops  
-
+    
