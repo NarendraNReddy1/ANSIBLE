@@ -106,8 +106,9 @@
   become: no 
   tasks:
   - name: loop
-    ansible.builtin.debug:
-      msg: "{{item}}"
+    ansible.builtin.dnf:
+      name: "{{item}}"
+      state: latest
     loop:
     - ansible
     - terraform
