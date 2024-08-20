@@ -44,11 +44,11 @@
 - name: variables
   hosts: localhost
   become: no 
-  vars:
-    COURSE: "DEVOPS"
-    TRAINER: "SIVA"
-  # vars_files:
-  #   vars.yaml  
+  # vars:
+  #   COURSE: "DEVOPS"
+  #   TRAINER: "SIVA"
+  vars_files:
+    vars.yaml  
   tasks:
   - name: vars1 task
     vars:
@@ -56,9 +56,9 @@
     ansible.builtin.debug:
       msg: "{{COURSE}} {{TRAINER}}"  
 
-  - name: vars2 play
-    ansible.builtin.debug:
-      msg: "{{COURSE}} {{TRAINER}}"       
+  # - name: vars2 play
+  #   ansible.builtin.debug:
+  #     msg: "{{COURSE}} {{TRAINER}}"       
 
 
  
