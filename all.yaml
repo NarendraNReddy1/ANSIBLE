@@ -51,7 +51,7 @@
   tasks:
   - name: vars1 task
     ansible.builtin.debug:
-      msg: "{{USERNAME}} "  
+      msg: "{{USERNAME}} {{COURSE}}"  
 
     
 
