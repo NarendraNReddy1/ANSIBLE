@@ -72,7 +72,7 @@
 #       msg: "{{TOOLS}} {{TOOLS1}} {{RealProj}}"
 
 - name: id check
-  hosts: localhost
+  hosts: web
   become: yes
   tasks:
   - name: id check
