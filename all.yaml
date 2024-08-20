@@ -41,18 +41,34 @@
 #     ansible.builtin.debug:
 #       msg: "Play-2 , task-2"
 
-- name: variables
-  hosts: localhost
-  become: no 
-  vars_prompt:
-    name: USERNAME
-    prompt: "ENTER USERNAME::"
-    private: false  
-  tasks:
-  - name: vars1 task
-    ansible.builtin.debug:
-      msg: "{{USERNAME}} {{COURSE}}"  
+# - name: variables
+#   hosts: localhost
+#   become: no 
+#   vars_prompt:
+#     name: USERNAME
+#     prompt: "ENTER USERNAME::"
+#     private: false  
+#   tasks:
+#   - name: vars1 task
+#     ansible.builtin.debug:
+#       msg: "{{USERNAME}} {{COURSE}}"  
 
+- name: datatypes
+  hosts: localhost
+  become: no
+  vars:
+    TOOLS:
+    - NNR 
+    - NNR1
+    - NNR2 
+    TOOLS1:
+      terraform: 2
+      ansible: 3
+
+  tasks:
+  - name: datatypes
+    ansible.builtin.debug:
+      msg: "{{TOOLS}} {{TOOLS1}}"
     
 
 
