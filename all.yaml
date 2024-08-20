@@ -5,17 +5,40 @@
 #   - name: ping the server
 #     ansible.builtin.ping:
 
-- name: nginx 
-  hosts: web
-  become: yes
+# - name: nginx 
+#   hosts: web
+#   become: yes
+#   tasks:
+#   - name: Install
+#     ansible.builtin.dnf:
+#       name: nginx
+#       state: installed
+#   - name: start service
+#     ansible.builtin.service:
+#       name: nginx
+#       state: started
+#       enabled: yes 
+
+- name: multiplay
+  hosts: localhost
+  become: no 
   tasks:
-  - name: Install
-    ansible.builtin.dnf:
-      name: nginx
-      state: installed
-  - name: start service
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes 
+  - name: play-1 task-1
+    ansible.builtin.debug:
+      msg:  "Play-1,task-1"
+  - name: play-1 task-2
+    ansible.builtin.debug:
+      msg: "Play-1 , task-2"
+
+- name: multiplay
+  hosts: localhost
+  become: no 
+  tasks:
+  - name: play-2 task-1
+    ansible.builtin.debug:
+      msg:  "Play-12,task-1"
+  - name: play-12 task-2
+    ansible.builtin.debug:
+      msg: "Play-12 , task-2"
+
  
