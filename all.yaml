@@ -102,8 +102,8 @@
 #     when: number > 10  
 
 - name: functions
-  hosts: localhost
-  become: no 
+  hosts: web
+  become: yes 
   tasks:
   - name: loop
     ansible.builtin.dnf:
