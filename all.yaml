@@ -19,26 +19,37 @@
 #       state: started
 #       enabled: yes 
 
-- name: multiplay
-  hosts: localhost
-  become: no 
-  tasks:
-  - name: play-1 task-1
-    ansible.builtin.debug:
-      msg:  "Play-1,task-1"
-  - name: play-1 task-2
-    ansible.builtin.debug:
-      msg: "Play-1 , task-2"
+# - name: multiplay
+#   hosts: localhost
+#   become: no 
+#   tasks:
+#   - name: play-1 task-1
+#     ansible.builtin.debug:
+#       msg:  "Play-1,task-1"
+#   - name: play-1 task-2
+#     ansible.builtin.debug:
+#       msg: "Play-1 , task-2"
 
-- name: multiplay
+# - name: multiplay
+#   hosts: localhost
+#   become: no 
+#   tasks:
+#   - name: play-2 task-1
+#     ansible.builtin.debug:
+#       msg:  "Play-1,task-1"
+#   - name: play-2 task-2
+#     ansible.builtin.debug:
+#       msg: "Play-2 , task-2"
+
+- name: variables
   hosts: localhost
   become: no 
+  vars:
+    COURSE: "DEVOPS"
+    TRAINER: "SIVA"
   tasks:
-  - name: play-2 task-1
+  - name: vars
     ansible.builtin.debug:
-      msg:  "Play-12,task-1"
-  - name: play-12 task-2
-    ansible.builtin.debug:
-      msg: "Play-12 , task-2"
+      msg: "{{COURSE}} {{TRAINER}}"  
 
  
