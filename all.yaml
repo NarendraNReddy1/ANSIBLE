@@ -104,10 +104,12 @@
 - name: functions
   hosts: localhost
   become: no 
-  vars:
-    numbers: [1,1,2,2,3,3,4]
   tasks:
-  - name: greetings
+  - name: loop
     ansible.builtin.debug:
-      msg: "{{ numbers | min }}"
+      msg: "{{item}}"
+    loop:
+    - ansible
+    - terraform
+    - devops  
 
