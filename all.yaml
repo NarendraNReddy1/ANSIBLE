@@ -49,6 +49,10 @@
   #   TRAINER: "SIVA"
   vars_files:
     vars.yaml  
+  vars_prompt:
+    name: USERNAME
+    prompt: "ENTER USERNAME::"
+    private: false  
   tasks:
   - name: vars1 task
     # vars:
