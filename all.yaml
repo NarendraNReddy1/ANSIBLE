@@ -51,8 +51,8 @@
     vars.yaml  
   tasks:
   - name: vars1 task
-    vars:
-      COURSE: "DEVOPS1"
+    # vars:
+    #   COURSE: "DEVOPS1"
     ansible.builtin.debug:
       msg: "{{COURSE}} {{TRAINER}}"  
 
