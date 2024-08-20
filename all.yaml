@@ -106,10 +106,11 @@
   become: no 
   vars:
     greet: "Hello how are you"
+    numbers: [1,1,2,2,3,3,4]
   tasks:
   - name: greetings
     ansible.builtin.debug:
-      msg: "{{greet | upper}}"   
+      msg: "{{numbers | unique}}
 
 
     
