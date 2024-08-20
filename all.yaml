@@ -78,10 +78,11 @@
   - name: id check
     ansible.builtin.command: id user
     ignore_errors: true
+    register: USER
 
   - name: print
     ansible.builtin.debug:
-      msg: "Hello"  
+      msg: "Hello {{USER}}"  
     
 
 
