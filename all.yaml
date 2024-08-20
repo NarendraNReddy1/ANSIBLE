@@ -109,5 +109,5 @@
   tasks:
   - name: greetings
     ansible.builtin.debug:
-      msg: "{{ numbers | unique }}"
+      msg: "{{ numbers | min }}"
 
