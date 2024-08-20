@@ -53,23 +53,34 @@
 #     ansible.builtin.debug:
 #       msg: "{{USERNAME}} {{COURSE}}"  
 
-- name: datatypes
-  hosts: localhost
-  become: no
-  vars:
-    TOOLS:
-    - NNR 
-    - NNR1
-    - NNR2 
-    TOOLS1:
-      terraform: 2
-      ansible: 3
-    RealProj: true  
+# - name: datatypes
+#   hosts: localhost
+#   become: no
+#   vars:
+#     TOOLS:
+#     - NNR 
+#     - NNR1
+#     - NNR2 
+#     TOOLS1:
+#       terraform: 2
+#       ansible: 3
+#     RealProj: true  
 
+#   tasks:
+#   - name: datatypes
+#     ansible.builtin.debug:
+#       msg: "{{TOOLS}} {{TOOLS1}} {{RealProj}}"
+
+- name: id check
+  hosts: localhost
+  become: no 
   tasks:
-  - name: datatypes
+  - name: id check
+    ansible.builtin.command: id user
+
+  - name: print
     ansible.builtin.debug:
-      msg: "{{TOOLS}} {{TOOLS1}} {{RealProj}}"
+      msg: "Hello"  
     
 
 
