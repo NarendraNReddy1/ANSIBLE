@@ -109,7 +109,7 @@
   tasks:
   - name: greetings
     ansible.builtin.debug:
-      msg: "{{greet | lower}}"   
+      msg: "{{greet | upper}}"   
 
 
     
