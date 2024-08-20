@@ -64,6 +64,7 @@
     TOOLS1:
       terraform: 2
       ansible: 3
+    RealProj: true  
 
   tasks:
   - name: datatypes
