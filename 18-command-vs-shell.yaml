@@ -2,8 +2,9 @@
   hosts: localhost
   become: yes
   tasks:
-  -name: command module
-   ansible.builtin.command:  "echo,'hi, this is the from command line' > /tmp/command.txt "
-  -name: shell module
-    ansible.builtin.shell: "echo,'hi, this is the from shell line' > /tmp/shell.txt "    
+  - name: command module
+    ansible.builtin.command: "echo 'Hi, this is from command module' > /tmp/command.txt "
+
+  - name: shell module
+    ansible.builtin.shell: "echo 'Hi, this is from shell module' > /tmp/shell.txt " 
 
