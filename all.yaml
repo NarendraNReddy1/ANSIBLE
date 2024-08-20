@@ -69,7 +69,7 @@
   tasks:
   - name: datatypes
     ansible.builtin.debug:
-      msg: "{{TOOLS}} {{TOOLS1}}"
+      msg: "{{TOOLS}} {{TOOLS1}} {{RealProj}}"
     
 
 
