@@ -96,7 +96,8 @@
   tasks:
   - name: functions
     ansible.builtin.debug:
-      msg: "{{numbers | int}}"
+      msg: "{{number}} is less than 10"
+    when: number < 10  
     
 
 
